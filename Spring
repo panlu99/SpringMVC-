@@ -1,0 +1,9 @@
+@RestController 接口的返回值返回json形式
+1、表单形式提交。
+入参分开表示：函数入参名必须和表单名保持一致，@RequestParam 注解可标注字段的默认值和是否必传；入参包装为对象：对象添加注解@ModelaAttribute
+2、连接后面&追加参数值。@PathVaribale("连接后面的参数名”) @RequestParam(value = “连接后面的参数名”) 也可以什么都不加，直接用名称表示
+3、对象形式传递。支持级联属性(对象里面包含的对象的字段也可以映射到)(@ModelaAttribute POJO pojo)
+
+
+@RequestHeader(value = "字段名")可获取到报头的属性值
+@CookieValue(value = "字段名")获取cookie中的值
